@@ -27,6 +27,7 @@ class DataReader():
 		
 		inputs_batch = self.inputs[batch_slice]
 		targets_batch = self.targets[batch_slice]
+		self.curr_batch += 1
 		
 		#apply one-hot encode to targets, 0 --> 0
 		classes_num = 2 #ADJUST FOR OTHER CLASSIFICATION PROBLEM

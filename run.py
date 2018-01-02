@@ -4,7 +4,7 @@ from model import Model
 
 def main():
 	#Prepare dataset from csv to npz files
-	DatasetPreparation.prepare('Audiobooks-data.csv')
+	#DatasetPreparation.prepare('Audiobooks-data.csv')
 	
 	#Read the dataset, create batches, and one hot encode the targets
 	batch_size = 100
@@ -15,7 +15,7 @@ def main():
 	m = Model(train_data,validation_data)
 	m.train()
 	
-	
+	m.test(test_data)	
 	
   
 if __name__== "__main__":
